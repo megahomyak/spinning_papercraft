@@ -1,9 +1,9 @@
-let line = (xd, yd, style) => (x, y, sendLine) => sendLine({ x, y }, { x: x + xd, y: y + yd }, style);
-let offset = (xd, yd, target) => (x, y, sendLine) => target(x + xd, y + yd, sendLine);
+let line = (xd, yd, style) => ctx => ctx.sendLine({ x: 0, y: 0 }, { x: xd + ctx.x, y: yd + ctx.y }, style);
+let offset = (xd, yd, target) => ctx => target({ ...ctx, x: ctx.x + xd, y: ctx.y + yd });
 
-let combine = (...targets) => (x, y, sendLine) => {
+let combine = (...targets) => (x, y) => {
     for (let target of targets) {
-        target(x, y, sendLine);
+        target(x, y);
     }
 };
 
