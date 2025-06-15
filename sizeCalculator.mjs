@@ -12,14 +12,14 @@ let category = (categoryName, handler) => {
 };
 
 category("params", g => {
-    g.boxSideSize = 4;
-    g.tubeFlatHeight = 4;
-    g.tubeOffsetWidth = 1;
-    g.tubeFlapCutLength = 1;
-    g.tubeSlitLength = (g.tubeFlatHeight / 2) - (g.tubeFlapCutLength * 2);
+    g.boxSideSize = 40;
+    g.tubeFlatHeight = 40;
+    g.tubeOffsetWidth = 10;
+    g.tubeFlapCutoffLength = 10;
 });
 
 category("tube", g => {
+    g.tubeFlapSlitLength = (g.tubeFlatHeight / 2) - (g.tubeFlapCutLength * 2);
     g.tubeDiameter = g.boxSideSize / 2;
     g.tubeHoleDiameter = g.tubeDiameter * 0.2;
     g.tubeRadius = g.tubeDiameter / 2;
