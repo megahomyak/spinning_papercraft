@@ -15,11 +15,11 @@ category("params", g => {
     g.boxSideSize = 40;
     g.tubeFlatHeight = 40;
     g.tubeOffsetWidth = 10;
-    g.tubeFlapCutoffLength = 10;
+    g.tubeFlapCutoffLength = 5;
 });
 
 category("tube", g => {
-    g.tubeFlapSlitLength = (g.tubeFlatHeight / 2) - (g.tubeFlapCutLength * 2);
+    g.tubeFlapSlitLength = (g.tubeFlatHeight / 2) - (g.tubeFlapCutoffLength * 2);
     g.tubeDiameter = g.boxSideSize / 2;
     g.tubeHoleDiameter = g.tubeDiameter * 0.2;
     g.tubeRadius = g.tubeDiameter / 2;
