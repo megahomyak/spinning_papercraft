@@ -25,7 +25,7 @@ category("tube", g => {
     g.tubeRadius = g.tubeDiameter / 2;
     g.tubeHalfCircleLength = g.tubeRadius * Math.PI;
     g.tubeFlatWidth = (g.tubeFlapWidth + g.tubeHalfCircleLength) * 2 + g.tubeDiameter;
-    g.tubeFlatPerpendicularCutWidth = (g.tubeFlatWidth / 2) - g.tubeHoleDiameter;
+    g.tubeFlatPerpendicularCutWidth = (g.tubeFlatWidth - g.tubeHoleDiameter) / 2;
 });
 
 category("box side with hole", g => {
